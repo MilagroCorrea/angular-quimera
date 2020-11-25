@@ -1,104 +1,21 @@
 <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">Nombre</th>
+        <th scope="col"></th>
         <th scope="col">Descripción</th>
         <th scope="col">Categoría</th>        
         <th scope="col">Precio</th>
         <th scope="col">Stock</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td><img [src]="ropa.image" [alt]="ropa.name"></td>
-        <td>{{ropa.description}}</td>
-        <td>{{ropa.category}}</td>
-        <td>{{ropa.price}}</td>
-        <td>{{ropa.stock}}</td>
+    <tbody class="color">
+      <tr *ngFor="let item of items" [ngClass]="{'clearance':item.clearance}">
+        <td><img [src]="item.image" [alt]="item.name"></td>
+        <td>{{item.description}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.price | currency}}</td>
+        <td><span class="badge badge-warning" *ngIf="item.stock==0">SIN STOCK</span></td>
       </tr>
-      <tr>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>Larry the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
+      
     </tbody>
   </table>
