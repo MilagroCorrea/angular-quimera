@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { RopaListComponent } from './ropa-list/ropa-list.component';
 import { RopaCartComponent } from './ropa-cart/ropa-cart.component';
 import { FormsModule } from '@angular/forms';
+import { QuimeraAboutComponent } from './quimera-about/quimera-about.component';
+import { QuimeraItemsComponent } from './quimera-items/quimera-items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RopaListComponent,
-    RopaCartComponent
+    RopaCartComponent,
+    QuimeraAboutComponent,
+    QuimeraItemsComponent
   ],
   imports: [
     BrowserModule,

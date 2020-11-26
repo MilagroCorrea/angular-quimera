@@ -5,17 +5,13 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="#">Nosotros</a>
-      <a class="nav-link" href="#">Contacto</a>
+      <a class="nav-link active" [routerLink]="['/']">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-link" [routerLink]="['/about']">Contacto</a>
     </div>
   </div>
 </nav>
 <div class="container">
-  <div class="row">
-    <div class="col-9"><app-ropa-list></app-ropa-list></div>
-    <div class="col-3"></div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
 <footer class="container-fluid text-center">
   <!--pie-->
