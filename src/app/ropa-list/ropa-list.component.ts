@@ -15,6 +15,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/vestidoRayas.png",
     clearance: false,
+    quantity: 0,
   },
   {
     name:"Blusa de Hilo",
@@ -24,6 +25,7 @@ export class RopaListComponent implements OnInit {
     stock: 0,
     image:"assets/img/blusaHilo.PNG",
     clearance: true,
+    quantity: 0,
   },
   {
     name:"Musculosa Mystique",
@@ -33,6 +35,7 @@ export class RopaListComponent implements OnInit {
     stock: 20,
     image:"assets/img/muscuMystique.PNG",
     clearance: false,
+    quantity: 0,
   },
   {
     name:"Blusa Básica",
@@ -42,6 +45,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/muscuNegra.PNG",
     clearance: true,
+    quantity: 0,
   },
   {
     name:"Remera Animal Print",
@@ -51,6 +55,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeAnimalPrint.PNG",
     clearance: false,
+    quantity: 0,
   },
   {
     name:"Remera Bolsillo",
@@ -60,6 +65,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeBolsillo.PNG",
     clearance: false,
+    quantity:0,
   },
   {
     name:"Remera Corazón",
@@ -69,6 +75,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeCorazon.PNG",
     clearance: true,
+    quantity:0,
   },
   {
     name:"Remera Cuadrito Friends",
@@ -78,6 +85,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeCuadrito.PNG",
     clearance: false,
+    quantity:0,
   },
   {
     name:"Remera Led Zeppelin",
@@ -87,6 +95,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeLedZep.PNG",
     clearance:false,
+    quantity: 0,
   },
   {
     name:"Remera ACDC",
@@ -96,6 +105,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeraACDC.PNG",
     clearance: false,
+    quantity:0,
   },
   {
     name:"Remera Queen",
@@ -105,6 +115,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeQueen.PNG",
     clearance: true,
+    quantity:0,
   },
   {
     name:"Remera White Snake",
@@ -114,6 +125,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeraWhiteSnake.PNG",
     clearance: true,
+    quantity: 0,
   },
   {
     name:"Remera Red Hot",
@@ -123,6 +135,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/remeRedHot.PNG",
     clearance:true,
+    quantity:0,
   },
   {
     name:"Solera Negra",
@@ -132,6 +145,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/soleraNegra.PNG",
     clearance: false,
+    quantity:0,
   },
   {
     name:"Vestido Batik",
@@ -141,6 +155,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/vestidoBatik.PNG",
     clearance:false,
+    quantity:0,
   },
   {
     name:"Vestido Tajo",
@@ -150,6 +165,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/vestidoLadrillo.PNG",
     clearance: false,
+    quantity:0,
   },
   {
     name:"Vestido Morley",
@@ -158,7 +174,8 @@ export class RopaListComponent implements OnInit {
     price: 1500,
     stock: 10,
     image:"assets/img/vestidoNegroMorley.PNG",
-    clearance: false
+    clearance: false,
+    quantity:0,
   },
   {
     name:"Vestido Oliva",
@@ -168,6 +185,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/vestidoOliva.PNG",
     clearance: true,
+    quantity:0,
   },
   {
     name:"Vestido",
@@ -177,6 +195,7 @@ export class RopaListComponent implements OnInit {
     stock: 10,
     image:"assets/img/vestidoRojo.PNG",
     clearance: false,
+    quantity:0,
   }
   /*{
     name:"Vestido",
@@ -335,6 +354,16 @@ export class RopaListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  upQuantity(item: Ropa):void{
+    if(item.quantity<item.stock)
+    item.quantity++;
+  }
+
+  downQuantity(item: Ropa):void{
+    if(item.quantity>0)
+    item.quantity--;
   }
 
 }
