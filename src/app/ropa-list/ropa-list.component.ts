@@ -356,14 +356,6 @@ export class RopaListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upQuantity(item: Ropa):void{
-    if(item.quantity<item.stock)
-    item.quantity++;
-  }
-
-  downQuantity(item: Ropa):void{
-    if(item.quantity>0)
-    item.quantity--;
-  }
+ 
 
 }

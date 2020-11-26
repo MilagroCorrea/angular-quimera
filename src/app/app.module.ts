@@ -8,6 +8,7 @@ import { RopaCartComponent } from './ropa-cart/ropa-cart.component';
 import { FormsModule } from '@angular/forms';
 import { QuimeraAboutComponent } from './quimera-about/quimera-about.component';
 import { QuimeraItemsComponent } from './quimera-items/quimera-items.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { QuimeraItemsComponent } from './quimera-items/quimera-items.component';
     RopaListComponent,
     RopaCartComponent,
     QuimeraAboutComponent,
-    QuimeraItemsComponent
+    QuimeraItemsComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,
