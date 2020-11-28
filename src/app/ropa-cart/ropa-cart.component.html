@@ -1,1 +1,21 @@
-<p>ropa-cart works!</p>
+<h1>Carrito</h1>
+    <!-- Elementos del carrito -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+        </tr>
+        </thead>
+        <tbody id="tblProductos">
+            <tr *ngFor="let unidad of cartList$|async" [ngClass]="{'clearance':unidad.clearance}">
+                <td><img [src]="unidad.image" [alt]="unidad.name"></td>
+                <td>{{unidad.price|currency}}</td>
+                <td>{{unidad.quantity}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <!-- Precio total -->
+<p class="text-right"> <span id="total"></span></p>

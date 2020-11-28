@@ -4,7 +4,6 @@ img{
   }
 
 .clearance{
-    border:palevioletred 2px solid;
     background-color: pink;
 
 }
@@ -16,7 +15,22 @@ img{
 .description{
     width: 50px;
 }
+h1{
+    font-family: 'Lobster', cursive;
+}
+thead{
+    background-color: rosybrown;
+}
 
+button.btn-primary{
+    border-color: crimson;
+    background-color: lightcoral;
+    margin:5px;
+    color: black;
+    width: 80px;
+    justify-content: center;
+
+}
 
 
 

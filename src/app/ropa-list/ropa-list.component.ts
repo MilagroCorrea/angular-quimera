@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemCartService } from '../item-cart.service';
 import {Ropa} from './ropa';
 
 @Component({
@@ -212,150 +213,22 @@ export class RopaListComponent implements OnInit {
     price: 1500,
     stock: 10,
     image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
-  },
-  {
-    name:"Vestido",
-    description:"Vestido negro largo de morley",
-    category: "Vestidos",
-    price: 1500,
-    stock: 10,
-    image:"assets/img/2.png"
   }*/
 ]
 
-  constructor() { }
+  constructor(private cart: ItemCartService) {
+    
+   }
 
   ngOnInit(): void {
   }
 
- 
-
+ addToCart(item: Ropa) : void {
+   this.cart.addToCart(item);
+   item.stock-=item.quantity;
+   item.quantity=0;
+ }
+ maxReached(m: string){
+   alert(m);
+ }
 }
